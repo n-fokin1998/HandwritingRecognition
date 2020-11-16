@@ -2,19 +2,26 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="write-wrapper text-center">
-    <p class="write-title h4">Write a character to the drawing area.</p>
-    <div class="canvas">
-        <canvas id="canvas" width="256" height="256"></canvas>
+<div class="write-wrapper">
+    <div class="write-area text-center">
+        <div class="canvas">
+            <canvas id="canvas" width="256" height="256"></canvas>
+        </div>
+        <div id="clearArea" class="close-button"></div>
+        <div class="predict-button" id="check">
+            <div class="icon">
+                <div class="arrow"></div>
+            </div>
+            <div class="icon2">
+                <div class="arrow2"></div>
+            </div>
+        </div>
     </div>
-    <p class="prediction-label">Prediction: <span id="prediction">?</span></p>
-    <div class="controls">
-        <button id="clearArea" class="btn btn-secondary">Clear</button>
-        <button id="check" class="btn btn-success">Predict</button>
+    <div class="write-result text-center">
+        <p id="prediction">?</p>
     </div>
 </div>
 
-
 <script type="text/javascript">
-
+    
 </script>

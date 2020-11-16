@@ -1,6 +1,7 @@
 ﻿a.navbar-brand {
     color: #fff !important;
-    padding-left: 20px;
+    font-weight: bold;
+    padding-left: 15px;
 }
 
 a {
@@ -65,20 +66,29 @@ a:hover {
 
 .content {
     width: 82%;
-    padding: 15px;
 }
 
-.prediction-label {
-    padding-top: 5px;
-    font-size: 20px;
-}
-
-.prediction-label span {
+#prediction {
+    font-size: 50px;
     font-weight: bold;
 }
 
 .write-wrapper {
-    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 607px;
+}
+
+.write-area {
+    width: 50%;
+    border-right: 1px solid #ccc;
+    background-color: #00b894;
+}
+
+.write-result {
+    width: 50%;
+    padding-top: 21%;
 }
 
 .write-title {
@@ -86,9 +96,9 @@ a:hover {
 }
 
 #canvas {
-    border: 2px solid #808080;
-    border-radius: 4px;
-    box-shadow: 7px 7px 5px 0px rgba(128,128,128,0.75);
+    margin-top: 28%;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
 .controls button {
@@ -99,6 +109,112 @@ a:hover {
 .controls button:first-child {
     margin-right: 15px;
 }
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 25px;
+    width: 90%;
+    height: 9px;
+    background-color: #fff;
+    animation: arrow 700ms linear infinite;
+}
+
+    .arrow::after, .arrow::before {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 10px;
+        right: -8px;
+        background-color: #00b894;
+    }
+
+    .arrow::after {
+        top: -12px;
+        transform: rotate(45deg);
+    }
+
+    .arrow::before {
+        top: 12px;
+        transform: rotate(-45deg);
+    }
+
+.icon2 {
+    position: absolute;
+    top: 50%;
+    left: 56.75%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.arrow2 {
+    position: absolute;
+    top: 24px;
+    width: 90%;
+    height: 11px;
+    background-color: #00b894;
+    animation: arrow 700ms linear infinite;
+}
+
+    .arrow2::after, .arrow2::before {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 10px;
+        right: -8px;
+        background-color: #fff;
+    }
+
+    .arrow2::after {
+        top: -12px;
+        transform: rotate(45deg);
+    }
+
+    .arrow2::before {
+        top: 12px;
+        transform: rotate(-45deg);
+    }
+
+.close-button {
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    width: 32px;
+    height: 32px;
+}
+
+.close-button:hover {
+    cursor: pointer;
+}
+
+.close-button:before, .close-button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 5px;
+    background-color: #fff;
+}
+
+.close-button:before {
+    transform: rotate(45deg);
+}
+
+.close-button:after {
+    transform: rotate(-45deg);
+}
+
 
 html {
     font-size: 16px;
