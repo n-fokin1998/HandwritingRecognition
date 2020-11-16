@@ -1,16 +1,17 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿a.navbar-brand {
+    color: #fff !important;
+    padding-left: 20px;
 }
 
-/* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #444;
 }
+
+a:hover {
+    color: #444;
+    text-decoration: none;
+}
+
 
 .btn-primary {
   color: #fff;
@@ -24,15 +25,85 @@ a {
   border-color: #1861ac;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
+.navbar, .footer {
+    background-color: #1976D2;
+    color: #fff !important;
 }
-@media (min-width: 768px) {
-  html {
+
+.nav-link {
+    color: #fff !important;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 607px;
+}
+
+.sidebar {
+    width: 18%;
+    box-shadow: 3px -1px 12px -5px rgba(128,128,128,0.75);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li a {
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+.sidebar li a:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.content {
+    width: 82%;
+    padding: 15px;
+}
+
+.prediction-label {
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.prediction-label span {
+    font-weight: bold;
+}
+
+.write-wrapper {
+    padding-top: 30px;
+}
+
+.write-title {
+    padding-bottom: 35px;
+}
+
+#canvas {
+    border: 2px solid #808080;
+    border-radius: 4px;
+    box-shadow: 7px 7px 5px 0px rgba(128,128,128,0.75);
+}
+
+.controls button {
+    width: 120px;
+    border-radius: 3px;
+}
+
+.controls button:first-child {
+    margin-right: 15px;
+}
+
+html {
     font-size: 16px;
-  }
+    position: relative;
+    min-height: 100%;
 }
 
 .border-top {
@@ -51,15 +122,7 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
 .footer {
@@ -67,5 +130,6 @@ body {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
+  text-align: center;
 }

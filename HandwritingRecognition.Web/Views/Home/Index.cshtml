@@ -2,13 +2,16 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <p>Write a character [A-Z0-9] in the box.</p>
-    <canvas id="canvas" width="256" height="256" style="border:2px solid black"></canvas>
-    <br />
-    <p id="prediction" class="h1">?</p>
-    <button id="clearArea" class="btn btn-secondary">Clear</button>
-    <button id="check" class="btn btn-success">Check</button>
+<div class="write-wrapper text-center">
+    <p class="write-title h4">Write a character to the drawing area.</p>
+    <div class="canvas">
+        <canvas id="canvas" width="256" height="256"></canvas>
+    </div>
+    <p class="prediction-label">Prediction: <span id="prediction">?</span></p>
+    <div class="controls">
+        <button id="clearArea" class="btn btn-secondary">Clear</button>
+        <button id="check" class="btn btn-success">Predict</button>
+    </div>
 </div>
 
 

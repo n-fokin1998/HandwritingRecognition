@@ -54,8 +54,8 @@
       el.offsetTop;
     if (isDown) {
       ctx.beginPath();
-      ctx.strokeStyle = '#FF0000';
-      ctx.lineWidth = '32';
+      ctx.strokeStyle = '#000000';
+      ctx.lineWidth = '28';
       ctx.lineJoin = 'round';
       ctx.moveTo(lastX, lastY);
       ctx.lineTo(x, y);
