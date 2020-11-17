@@ -73,17 +73,21 @@ a:hover {
     font-weight: bold;
 }
 
-.write-wrapper {
+.write-wrapper, .upload-wrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     min-height: 607px;
 }
 
-.write-area {
+.write-area, .upload-area {
     width: 50%;
     border-right: 1px solid #ccc;
     background-color: #00b894;
+}
+
+.upload-area {
+    background-color: #FAC831;
 }
 
 .write-result {
@@ -120,7 +124,7 @@ a:hover {
     cursor: pointer;
 }
 
-.arrow {
+.arrow, .upload-arrow {
     position: absolute;
     top: 25px;
     width: 90%;
@@ -129,7 +133,7 @@ a:hover {
     animation: arrow 700ms linear infinite;
 }
 
-    .arrow::after, .arrow::before {
+    .arrow::after, .arrow::before, .upload-arrow::after, .upload-arrow::before {
         content: '';
         position: absolute;
         width: 60%;
@@ -138,12 +142,16 @@ a:hover {
         background-color: #00b894;
     }
 
-    .arrow::after {
+    .upload-arrow::after, .upload-arrow::before {
+        background-color: #FAC831;
+    }
+
+    .arrow::after, .upload-arrow::after {
         top: -12px;
         transform: rotate(45deg);
     }
 
-    .arrow::before {
+    .arrow::before, .upload-arrow::before {
         top: 12px;
         transform: rotate(-45deg);
     }
@@ -158,7 +166,7 @@ a:hover {
     cursor: pointer;
 }
 
-.arrow2 {
+.arrow2, .upload-arrow2 {
     position: absolute;
     top: 24px;
     width: 90%;
@@ -167,7 +175,11 @@ a:hover {
     animation: arrow 700ms linear infinite;
 }
 
-    .arrow2::after, .arrow2::before {
+.upload-arrow2 {
+    background-color: #FAC831;
+}
+
+    .arrow2::after, .arrow2::before, .upload-arrow2::after, .upload-arrow2::before {
         content: '';
         position: absolute;
         width: 60%;
@@ -176,12 +188,12 @@ a:hover {
         background-color: #fff;
     }
 
-    .arrow2::after {
+    .arrow2::after, .upload-arrow2::after {
         top: -12px;
         transform: rotate(45deg);
     }
 
-    .arrow2::before {
+    .arrow2::before, .upload-arrow2::before {
         top: 12px;
         transform: rotate(-45deg);
     }
@@ -215,6 +227,67 @@ a:hover {
     transform: rotate(-45deg);
 }
 
+.upload-section {
+    margin-top: 8%;
+    margin-left: 35%;
+}
+
+.image-preview {
+    margin-top: 28%;
+    margin-left: 185px;
+    width: 260px;
+    height: 260px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding-top: 2px;
+}
+
+.image-preview img {
+    border: 0;
+}
+
+.example-2 .btn-tertiary {
+    color: #555;
+    padding: 0;
+    line-height: 40px;
+    width: 300px;
+    margin: auto;
+    display: block;
+    border: 2px solid #555;
+    background-color: #fff;
+}
+
+    .example-2 .btn-tertiary:hover, .example-2 .btn-tertiary:focus {
+        color: #888;
+        border-color: #888
+    }
+
+.example-2 .input-file {
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
+}
+
+    .example-2 .input-file + .js-labelFile {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 10px;
+        cursor: pointer
+    }
+
+        .example-2 .input-file + .js-labelFile .icon:before {
+            content: "\f093"
+        }
+
+        .example-2 .input-file + .js-labelFile.has-file .icon:before {
+            content: "\f00c";
+            color: #5AAC7B
+        }
 
 html {
     font-size: 16px;

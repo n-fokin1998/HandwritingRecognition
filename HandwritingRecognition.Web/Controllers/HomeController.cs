@@ -3,6 +3,7 @@ using HandwritingRecognition.BL.Interfaces;
 using HandwritingRecognition.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace HandwritingRecognition.Web.Controllers
 {
@@ -23,21 +24,26 @@ namespace HandwritingRecognition.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult PredictOnImage()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Upload(string base64Image)
+        public async Task<IActionResult> UploadAsync(string base64Image)
         {
             if (string.IsNullOrEmpty(base64Image))
             {
                 return BadRequest(new PredictionResultViewModel
                 {
-                    Prediction = '-',
-                    PixelValues = string.Empty
+                    Prediction = '-'
                 });
             }
 
-            var resultDto = _predictionService.PredictCharacterFromImage(base64Image);
+            var resultDto = await _predictionService.PredictCharacterFromImageAsync(base64Image);
 
             var result = _mapper.Map<PredictionResultViewModel>(resultDto);
 

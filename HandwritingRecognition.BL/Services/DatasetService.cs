@@ -1,4 +1,5 @@
-﻿using HandwritingRecognition.BL.Interfaces;
+﻿using HandwritingRecognition.BL.Extensions;
+using HandwritingRecognition.BL.Interfaces;
 using HandwritingRecognition.BL.Models.Configuration;
 using System;
 using System.Collections.Generic;
@@ -75,7 +76,7 @@ namespace HandwritingRecognition.BL.Services
 
                                 var datasetValue = _imageService.GetPixelValuesFromImage(result);
 
-                                tw.WriteLine($"{string.Join(",", datasetValue)},{character - 'A'}");
+                                tw.WriteLine($"{datasetValue.ToCommaSeparatedString()},{character - 'A'}");
                             }
                         }
                     }

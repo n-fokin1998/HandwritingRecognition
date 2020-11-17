@@ -1,9 +1,10 @@
 ﻿using HandwritingRecognition.BL.Models;
+using System.Threading.Tasks;
 
 namespace HandwritingRecognition.BL.Interfaces
 {
     public interface IPredictionService
     {
-        PredictionResultDto PredictCharacterFromImage(string base64Image);
+        Task<PredictionResultDto> PredictCharacterFromImageAsync(string base64Image);
     }
 }

@@ -1,9 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-(function() {
+﻿(function() {
   var mousePressed = false;
   var lastX, lastY;
   var el = document.getElementById('canvas');
@@ -81,7 +76,6 @@
         base64Image: el.toDataURL()
       }
     }).done(function(msg) {
-      console.log(msg.pixelValues);
       $('#prediction').text(msg.prediction);
     });
   });

@@ -1,0 +1,33 @@
+﻿@{ ViewData["Title"] = "Upload"; }
+
+<div class="upload-wrapper">
+    <div class="upload-area text-center">
+        <div class="image-preview">
+            <img id="imageHolder" src="~/images/no-image.png" width="256" height="256" />
+        </div>
+        <div class="example-2">
+            <div class="form-group">
+                <input type="file" name="file" id="file" class="input-file">
+                <label for="file" class="btn btn-tertiary js-labelFile">
+                    <span class="js-fileName">Upload image</span>
+                </label>
+            </div>
+        </div>
+        <div id="clearFileArea" class="close-button"></div>
+        <div class="predict-button" id="upload-check">
+            <div class="icon">
+                <div class="upload-arrow"></div>
+            </div>
+            <div class="icon2">
+                <div class="upload-arrow2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="write-result text-center">
+        <p id="prediction">?</p>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/upload.js" asp-append-version="true"></script>
+}
